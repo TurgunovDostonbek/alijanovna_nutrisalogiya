@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Nutriologiya</h1>
+      <h1 className="title-animated">Nutrisologiya</h1>
       <br />
       <button className="theme-toggle" onClick={toggleTheme}>
         {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
