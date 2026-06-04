@@ -4,6 +4,7 @@
   --bg-color: #f0f2f5;
   --text-color: #1c1e21;
   --container-bg: #ffffff;
+  --container-bg-rgb: 255, 255, 255;
   --button-bg: linear-gradient(135deg, #007bff, #0056b3);
   --button-text: #ffffff;
   --border-color: #e4e6eb;
@@ -19,6 +20,7 @@
   --bg-color: #18191a;
   --text-color: #e4e6eb;
   --container-bg: #242526;
+  --container-bg-rgb: 36, 37, 38;
   --button-bg: linear-gradient(135deg, #3d8bff, #1a73e8);
   --button-text: #ffffff;
   --border-color: #3e4042;
@@ -27,11 +29,23 @@
 }
 
 body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/photo_2026-06-01_14-31-29.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   margin: 0;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
 }
 
 .App {
@@ -65,11 +79,14 @@ body {
 
 .quiz-container,
 .result-container {
-  background: var(--container-bg);
+  background: rgba(var(--container-bg-rgb, 255, 255, 255), 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .options {
