@@ -43,16 +43,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  animation: background-rotate 20s infinite alternate;
+  animation: background-rotate 5s infinite alternate;
 }
 
 @keyframes background-rotate {
-  0%, 45% {
+  0%,
+  45% {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("./assets/photo_2026-06-05_09-18-05.jpg");
   }
-  55%, 100% {
+  55%,
+  100% {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("./assets/photo_2026-06-05_09-42-48.jpg");
@@ -514,8 +516,14 @@ button:disabled {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Media Queries for Responsiveness */
