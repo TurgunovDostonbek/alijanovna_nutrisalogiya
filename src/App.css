@@ -29,11 +29,8 @@
 }
 
 body {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./assets/photo_2026-06-05_09-18-05.jpg");
   background-size: cover;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
@@ -46,6 +43,20 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  animation: background-rotate 20s infinite alternate;
+}
+
+@keyframes background-rotate {
+  0%, 45% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("./assets/photo_2026-06-05_09-18-05.jpg");
+  }
+  55%, 100% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("./assets/photo_2026-06-05_09-42-48.jpg");
+  }
 }
 
 #root {
